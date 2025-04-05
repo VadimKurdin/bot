@@ -25,10 +25,10 @@ def echo_message(message):
         user_status = bot.get_chat_member(chat_id, user_id).status
          # проверка пользователя
         if user_status == 'administrator' or user_status == 'creator':
-            bot.reply_to(message, "Невозможно забанить администратора.")
+            pass
         else:
             bot.ban_chat_member(chat_id, user_id) # пользователь с user_id будет забанен в чате с chat_id
-            bot.reply_to(message, f"Пользователь @{message.from_user.username} был забанен.")
+            bot.reply_to(message, f"Пользователь @{message.from_user.username} был забанен за ссылку.")
             
 
 
